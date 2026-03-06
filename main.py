@@ -1,5 +1,6 @@
 dados_sujos = [10, " erro ", 20, 30, 40, None, 50, 15, " falha ", 25]
 
+
 def limpar_dados(dados_sujos):
     # Retorne uma lista apenas com int ou float
     dados_limpos = []
@@ -8,14 +9,22 @@ def limpar_dados(dados_sujos):
             dados_limpos.append(dado)
     return dados_limpos
 
+
 def calcular_media():
     pass
+
 
 def calcular_mediana():
     pass
 
-def calcular_variancia():
-    pass
+
+def calcular_variancia(dados):
+    media = sum(dados) / len(dados)
+    total = 0
+    for cada in dados:
+        total += (cada - media) ** 2 / len(dados)
+    return total
+
 
 def obter_extremos():
     pass
@@ -23,3 +32,4 @@ def obter_extremos():
 
 dados = limpar_dados(dados_sujos)
 print(f"Dados processados: {dados}")
+print(f"Verificado por Bruno Pezzolato")
