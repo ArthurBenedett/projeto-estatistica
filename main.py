@@ -1,5 +1,6 @@
 dados_sujos = [10, " erro ", 20, 30, 40, None, 50, 15, " falha ", 25]
 
+
 def limpar_dados(dados_sujos):
     dados_limpos = []
     for dado in dados_sujos:
@@ -18,6 +19,22 @@ def calcular_mediana(dados):
 def calcular_variancia(dados):
     pass
 
+def calcular_media():
+    pass
+
+
+def calcular_mediana():
+    pass
+
+
+def calcular_variancia(dados):
+    media = sum(dados) / len(dados)
+    total = 0
+    for cada in dados:
+        total += (cada - media) ** 2 / len(dados)
+    return total
+
+
 def obter_extremos(dados):
     pass
 
@@ -26,3 +43,4 @@ dados = limpar_dados(dados_sujos)
 
 print("Dados processados:", dados)
 print("Verificado por: Arthur")
+print(f"Verificado por Bruno Pezzolato")
